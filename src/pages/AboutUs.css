@@ -1,0 +1,88 @@
+.about-us {
+  padding: 0 20px; /* Add horizontal padding to the container */
+}
+
+.about-section {
+  background-color: #f4f4f4;  /* Light background color for the sections */
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.about-section1 {
+  display: flex;                    /* Use flexbox to arrange the fields horizontally */
+  gap: 10px;                         /* Space between the fields */
+  width: 100%;                       /* Use full width of the form */
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mission, .story {
+  flex: 1;                           /* Allow both fields to take up equal space */
+}
+
+.section-title {
+  background-color: #fff; /* White background for contrast */
+  padding: 15px 25px;      /* Add padding inside the box */
+  border-radius: 10px;     /* Rounded corners for a soft look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: center;      /* Center the text */
+  color: #E0A4A1;          /* Muted coral color */
+  font-size: 1.75rem;      /* Adjust size for emphasis */
+  margin-bottom: 20px;     /* Space below the heading box */
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #E0A4A1;  /* Muted coral color for headings */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-section p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.team-member {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  background-color: #d3d3d3;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #E0A4A1;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 1.3
+  rem;
+  color: #555;
+}

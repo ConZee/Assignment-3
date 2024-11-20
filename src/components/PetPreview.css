@@ -44,6 +44,10 @@
   color: #ff5722; /* Highlight color on hover */
 }
 
+.slick-dots{
+  padding-bottom: 5px;
+}
+
 .slick-dots li button:before {
   font-size: 12px; /* Adjust dot size */
   color: #999; /* Default dot color */

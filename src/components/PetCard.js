@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './PetCard.css';
 
 const PetCard = ({ pet }) => {
@@ -15,7 +16,9 @@ const PetCard = ({ pet }) => {
         <p>Breed: {pet.breed}</p>
         <p>Temperament: {pet.temperament || 'Unknown'}</p>
       </div>
-      <button className="adopt-btn">Adopt Me</button>
+      <Link to={`/adopt/${pet.name}`} className="adopt-btn">
+        Adopt Me
+      </Link>
     </div>
   );
 };

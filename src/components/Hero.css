@@ -4,15 +4,15 @@
   align-items: center;
   height: 80vh; /* Reduced height */
   padding: 0 20px;
-  background-color: #f0f0f0; /* Optional background color */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(216, 196, 163, 1)),
+              url('../img/hero-image.jpeg'); /* Image with gradient overlay */
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
 .hero-image {
   flex: 1;
-  background-image: url('../img/hero-image.jpeg'); /* Replace with actual image URL */
-  background-size: cover;
-  background-position: center;
   height: 100%;
 }
 
@@ -25,21 +25,24 @@
   text-align: left;
   padding: 30px;
   color: #fff;
+  background-color: rgba(216, 196, 163, 0.7); /* Pastel Brown background */
 }
 
 .hero-content h1 {
+  color: #F5F5DC;
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
 .hero-content p {
+  color: #F5F5DC;
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
 .hero-button {
-  background-color: #3498db;
+  background-color: #E0A4A1; /* Muted Coral for button */
   color: white;
   padding: 15px 30px;
   border: none;
@@ -50,5 +53,5 @@
 }
 
 .hero-button:hover {
-  background-color: #2980b9;
+  background-color: #C0807C
 }

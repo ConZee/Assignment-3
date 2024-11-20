@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { PetContext } from '../context/context';
-import PetCard from '../components/PetCard';
 import { ClipLoader } from 'react-spinners';
+import Description from '../components/Description';
+import PetCard from '../components/PetCard';
 import './PetGallery.css';
 
 const PetGallery = () => {
@@ -27,10 +28,16 @@ const PetGallery = () => {
   }
 
   return (
-    <div className="pet-gallery">
-      {pets.map((pet, index) => (
-        <PetCard key={index} pet={pet} />
-      ))}
+    <div>
+      <Description 
+        title="Our Pets"
+        description="Find your new best friend."
+      />
+      <div className="pet-gallery">
+        {pets.map((pet, index) => (
+          <PetCard key={index} pet={pet} />
+        ))}
+      </div>
     </div>
   );
 };

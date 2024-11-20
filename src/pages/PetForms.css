@@ -1,0 +1,71 @@
+.adopt-pet-form, .release-pet-form {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #E0A4A1; /* Muted Coral for heading */
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-type-breed {
+  display: flex;                    /* Use flexbox to arrange the fields horizontally */
+  gap: 10px;                         /* Space between the fields */
+  width: 100%;                       /* Use full width of the form */
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pet-type, .pet-breed {
+  flex: 1;                           /* Allow both fields to take up equal space */
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="file"], textarea {
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #E0A4A1; /* Muted Coral for button */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #C0807C; /* Hover colour */
+}
+
