@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PetCard from './PetCard';  // Assuming PetCard is reusable
-import './PetPreview.css';
 
 const PetPreview = () => {
   const [pets, setPets] = useState([]);

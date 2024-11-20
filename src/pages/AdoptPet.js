@@ -1,6 +1,5 @@
 import React from 'react';
 import Description from '../components/Description';
-import AdoptionForm from '../components/AdoptionForm';  // Make sure the AdoptionForm component exists
 
 const AdoptPet = () => {
   return (
@@ -10,7 +9,7 @@ const AdoptPet = () => {
         description="Become their Forever HOME!"
       />
       <h1>Adopt a Pet</h1>
-      <AdoptionForm />
+    
     </div>
   );
 };

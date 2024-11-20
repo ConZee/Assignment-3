@@ -3,5 +3,11 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  padding: 10px; /* Add padding around the gallery */
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .pet-gallery {
+    grid-template-columns: 1fr;
+  }
 }
