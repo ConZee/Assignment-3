@@ -1,0 +1,66 @@
+/* Global body styles */
+body {
+  background-color: #F5F1E1; /* Light Beige */
+  font-family: Arial, sans-serif;
+  color: #3E3A3A; /* Dark Brown */
+  margin: 0;
+  padding: 0;
+}
+
+/* Links and Buttons */
+a, button {
+  color: #3E3A3A; /* Dark Brown for text */
+  text-decoration: none;
+}
+
+button {
+  background-color: #E0A4A1; /* Muted Coral */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #C4B8A6; /* Soft Taupe for hover */
+}
+
+a:hover, button:hover {
+  color: #3E3A3A; /* Dark Brown */
+  transition: all 0.3s ease;
+}
+
+/* Main Header */
+h1 {
+  color: #D8C4A3; /* Pastel Brown */
+  text-align: center;
+}
+
+/* Section Titles */
+h2 {
+  color: #F1B6B3; /* Soft Peach */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Card Components */
+.pet-card {
+  background-color: #FFFFFF; /* White for card background */
+  color: #3E3A3A; /* Dark Brown for text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Pet Image Styling */
+.pet-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

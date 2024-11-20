@@ -1,0 +1,35 @@
+.adoption-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #2d333d;
+  color: white;
+  border-radius: 5px;
+}
+
+.adoption-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.adoption-form input,
+.adoption-form textarea,
+.adoption-form button {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.adoption-form button {
+  background-color: #ffc107;
+  color: #2d333d;
+  font-weight: bold;
+}
+
+.adoption-form button:hover {
+  background-color: #eca216;
+}

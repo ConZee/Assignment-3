@@ -1,0 +1,29 @@
+.hero-section {
+  background-color: #F5F1E1; /* Light Beige */
+  padding: 3rem;
+  text-align: center;
+  border-bottom: 2px solid #D8C4A3; /* Pastel Brown border */
+}
+
+.hero-content h1 {
+  color: #D8C4A3; /* Pastel Brown */
+  font-size: 3rem;
+}
+
+.hero-content p {
+  color: #3E3A3A; /* Dark Brown */
+  font-size: 1.2rem;
+}
+
+.hero-content button {
+  background-color: #E0A4A1; /* Muted Coral */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #C4B8A6; /* Soft Taupe for hover effect */
+}

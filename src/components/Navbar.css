@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #D8C4A3; /* Pastel Brown */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  color: #3E3A3A; /* Dark Brown */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  color: #3E3A3A; /* Dark Brown */
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #F1B6B3; /* Soft Peach for hover effect */
+}

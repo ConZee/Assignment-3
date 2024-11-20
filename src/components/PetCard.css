@@ -1,0 +1,41 @@
+.pet-card {
+  background-color: #FFFFFF; /* White card background */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: scale(1.05);
+}
+
+.pet-card h3 {
+  color: #3E3A3A; /* Dark Brown */
+}
+
+.pet-card p {
+  color: #D8C4A3; /* Pastel Brown */
+}
+
+.pet-card button {
+  background-color: #E0A4A1; /* Muted Coral */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pet-card button:hover {
+  background-color: #C4B8A6; /* Soft Taupe */
+}
+
+.pet-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
