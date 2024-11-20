@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const PetContext = createContext(); // Create the Context
+export const PetContext = createContext(); 
 
 export const PetProvider = ({ children }) => {
   const [dogs, setDogs] = useState([]);

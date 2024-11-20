@@ -1,29 +1,54 @@
 .hero-section {
-  background-color: #F5F1E1; /* Light Beige */
-  padding: 3rem;
-  text-align: center;
-  border-bottom: 2px solid #D8C4A3; /* Pastel Brown border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh; /* Reduced height */
+  padding: 0 20px;
+  background-color: #f0f0f0; /* Optional background color */
+  position: relative;
+}
+
+.hero-image {
+  flex: 1;
+  background-image: url('../img/hero-image.jpeg'); /* Replace with actual image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 30px;
+  color: #fff;
 }
 
 .hero-content h1 {
-  color: #D8C4A3; /* Pastel Brown */
   font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .hero-content p {
-  color: #3E3A3A; /* Dark Brown */
   font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-.hero-content button {
-  background-color: #E0A4A1; /* Muted Coral */
+.hero-button {
+  background-color: #3498db;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.hero-content button:hover {
-  background-color: #C4B8A6; /* Soft Taupe for hover effect */
+.hero-button:hover {
+  background-color: #2980b9;
 }
