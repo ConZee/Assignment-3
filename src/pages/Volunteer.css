@@ -1,9 +1,15 @@
+.volunteer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
 .volunteer-form {
-  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
+  max-width: 600px;
+  width: 100%; /* Ensure responsiveness */
 }
 
 .volunteer-form .form-group {
@@ -15,17 +21,13 @@
   color: #333;
 }
 
-.volunteer-form input, .volunteer-form select, .volunteer-form textarea {
+.volunteer-form input, .volunteer-form select {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
-}
-
-.volunteer-form textarea {
-  height: 100px;
 }
 
 .volunteer-btn {

@@ -1,77 +1,86 @@
 import React, { useState } from 'react';
+import Description from '../components/Description';
 import './Volunteer.css';
 
 const Volunteer = () => {
   const [volunteerName, setVolunteerName] = useState('');
   const [volunteerEmail, setVolunteerEmail] = useState('');
-  const [volunteerRole, setVolunteerRole] = useState('');
+  const [interestArea, setInterestArea] = useState('');
   const [availability, setAvailability] = useState('');
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here, such as sending data to a backend
-    console.log('Volunteer submitted:', { volunteerName, volunteerEmail, volunteerRole, availability });
+    console.log('Volunteer submitted:', { volunteerName, volunteerEmail, interestArea, availability });
   };
 
   return (
-    <div className="volunteer-page">
-      <h1>Volunteer with Us</h1>
-      <p>
-        If you're passionate about animals and want to make a real difference,
-        consider volunteering with Pet Heaven. We are always looking for loving,
-        dedicated volunteers to help with rescue efforts, adoption events, and more!
-      </p>
+    <div>
+      <Description 
+          title="Make a Difference"
+          description="If you're passionate about animals and want to make a real difference,
+          consider volunteering with Pet Heaven. We are always looking for loving,
+          dedicated volunteers to help with rescue efforts, adoption events, and more!"
+        />
+      <div className="volunteer-container">
+        <form className="volunteer-form" onSubmit={handleFormSubmit}>
+          <h2>Volunteer With Us</h2>
 
-      <form onSubmit={handleFormSubmit} className="volunteer-form">
-        <div className="form-group">
-          <label htmlFor="volunteer-name">Name:</label>
-          <input
-            type="text"
-            id="volunteer-name"
-            value={volunteerName}
-            onChange={(e) => setVolunteerName(e.target.value)}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              value={volunteerName}
+              onChange={(e) => setVolunteerName(e.target.value)}
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="volunteer-email">Email:</label>
-          <input
-            type="email"
-            id="volunteer-email"
-            value={volunteerEmail}
-            onChange={(e) => setVolunteerEmail(e.target.value)}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={volunteerEmail}
+              onChange={(e) => setVolunteerEmail(e.target.value)}
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="volunteer-role">Preferred Role:</label>
-          <select
-            id="volunteer-role"
-            value={volunteerRole}
-            onChange={(e) => setVolunteerRole(e.target.value)}
-            required
-          >
-            <option value="animal-caretaker">Animal Caretaker</option>
-            <option value="event-coordinator">Event Coordinator</option>
-            <option value="adoption-counselor">Adoption Counselor</option>
-            <option value="fundraising-assistant">Fundraising Assistant</option>
-          </select>
-        </div>
+          <div className="form-group">
+            <label htmlFor="availability">Availability:</label>
+            <input
+              type="text"
+              id="availability"
+              value={availability}
+              onChange={(e) => setAvailability(e.target.value)}
+              placeholder="Enter your availability (e.g., weekends, weekdays)"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="availability">Availability (Days/Times):</label>
-          <textarea
-            id="availability"
-            value={availability}
-            onChange={(e) => setAvailability(e.target.value)}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label htmlFor="interestArea">Area of Interest:</label>
+            <select
+              id="interestArea"
+              value={interestArea}
+              onChange={(e) => setInterestArea(e.target.value)}
+              required
+            >
+              <option value="">Select Area</option>
+              <option value="animal care">Animal Care</option>
+              <option value="events">Events</option>
+              <option value="administration">Administration</option>
+              <option value="fundraising">Fundraising</option>
+            </select>
+          </div>
 
-        <button type="submit" className="volunteer-btn">Submit Application</button>
-      </form>
+          <button type="submit" className="volunteer-btn">Sign Up</button>
+        </form>
+      </div>
     </div>
   );
 };

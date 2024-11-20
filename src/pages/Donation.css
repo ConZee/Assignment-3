@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Adjust height as needed */
+  min-height: 60vh; /* Adjust height as needed */
 }
 
 .donation-form {
