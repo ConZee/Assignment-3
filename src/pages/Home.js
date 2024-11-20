@@ -1,53 +1,35 @@
-import React from 'react';
-import PetGallery from '../components/PetGallery';
+import React, { useEffect, useState } from 'react';
+import Description from '../components/Description';
+import PetPreview from '../components/PetPreview';  // Corrected the import path
 import Hero from '../components/Hero';
+import axios from 'axios';
 
 const Home = () => {
-  const pets = [
-    {
-      name: 'Bella',
-      breed: 'Labrador',
-      age: '2 years',
-      description: 'Friendly and energetic',
-      imageUrl: 'https://placekitten.com/200/300',
-    },
-    {
-      name: 'Max',
-      breed: 'Bulldog',
-      age: '3 years',
-      description: 'Calm and loving',
-      imageUrl: 'https://placekitten.com/201/300',
-    },
-    {
-      name: 'Oliver',
-      breed: 'Beagle',
-      age: '1 year',
-      description: 'Playful and curious',
-      imageUrl: 'https://placekitten.com/202/300',
-    },
-    {
-      name: 'Luna',
-      breed: 'Golden Retriever',
-      age: '3 years',
-      description: 'Friendly and loves to play',
-      imageUrl: 'https://placekitten.com/203/300',
-    },
-    {
-      name: 'Charlie',
-      breed: 'Poodle',
-      age: '2 years',
-      description: 'Smart and hypoallergenic',
-      imageUrl: 'https://placekitten.com/204/300',
-    },
-  ];
+  // State to store the fetched pets data
+  const [pets, setPets] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the API
+    axios.get('https://portal.thatapicompany.com/api/pets')  // Replace with correct endpoint
+      .then((response) => {
+        setPets(response.data); // Assuming the data is in 'response.data'
+      })
+      .catch((error) => {
+        console.error('Error fetching pet data:', error);
+      });
+  }, []);
 
   return (
     <div>
+      <Description 
+        title="Welcome to Pet Adoption"
+        description="Find your perfect pet companion today!"
+      />
       {/* Hero Section */}
       <Hero />
 
-      {/* Pet Gallery */}
-      <PetGallery pets={pets} />
+      {/* Pet Preview Section (Smaller Showcase of Pets) */}
+      <PetPreview pets={pets} />
     </div>
   );
 };

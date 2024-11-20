@@ -1,27 +1,41 @@
 .pet-card {
-  background-color: #FFFFFF; /* White card background */
-  border: 1px solid #ddd; /* Light border */
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
   transition: transform 0.3s ease;
+  width: 200px; /* Fixed width for pet card */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Ensures content doesn't overflow the card */
 }
 
-.pet-card:hover {
-  transform: scale(1.05);
+.pet-card img {
+  width: 100%; /* Makes the image take full width of the card */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  border-radius: 10px; /* Rounded corners for the image */
+  margin-bottom: 10px; /* Space between image and info */
 }
 
 .pet-card h3 {
-  color: #3E3A3A; /* Dark Brown */
+  color: #3E3A3A;
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
 .pet-card p {
-  color: #D8C4A3; /* Pastel Brown */
+  color: #D8C4A3;
+  font-size: 1rem;
+  margin: 5px 0;
 }
 
 .pet-card button {
-  background-color: #E0A4A1; /* Muted Coral */
+  background-color: #E0A4A1;
   color: white;
   padding: 0.5rem 1.5rem;
   border: none;
@@ -30,12 +44,17 @@
 }
 
 .pet-card button:hover {
-  background-color: #C4B8A6; /* Soft Taupe */
+  background-color: #C4B8A6;
 }
 
-.pet-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
+.pet-info {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #3E3A3A;
+}
+
+.pet-info span {
+  display: block;
+  margin-top: 5px;
+  color: #D8C4A3;
 }

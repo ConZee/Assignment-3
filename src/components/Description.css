@@ -1,0 +1,30 @@
+.description {
+  background-color: #F5F1E1; /* Light Beige */
+  padding: 2rem 1rem; /* Adjusted padding for a shorter description */
+  text-align: center;
+  border-bottom: 2px solid #D8C4A3; /* Pastel Brown border */
+}
+
+.description-content h1 {
+  color: #D8C4A3; /* Pastel Brown */
+  font-size: 2.5rem; /* Slightly smaller font size */
+  margin-bottom: 0.5rem;
+}
+
+.description-content p {
+  color: #3E3A3A; /* Dark Brown */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  max-width: 800px; /* Ensures text doesn't stretch too wide */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .description-content h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+  .description-content p {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
+}

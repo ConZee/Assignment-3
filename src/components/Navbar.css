@@ -1,25 +1,69 @@
+/* Navbar container */
 .navbar {
   background-color: #D8C4A3; /* Pastel Brown */
-  padding: 1rem;
+  padding: 1rem 2rem; /* Adjust padding to your liking */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
 }
 
-.navbar-logo {
+/* Logo styles */
+.navbar-logo a {
   font-size: 1.8rem;
   color: #3E3A3A; /* Dark Brown */
   font-weight: bold;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual link styles */
+.navbar-links li {
+  margin: 0 1rem;
 }
 
 .navbar-links a {
   color: #3E3A3A; /* Dark Brown */
-  margin: 0 15px;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 0;
+  transition: color 0.3s, transform 0.3s;
 }
 
+/* Hover effects for links */
 .navbar-links a:hover {
-  color: #F1B6B3; /* Soft Peach for hover effect */
+  color: #F5F5DC; /* Soft Ivory/Beige for hover effect */
+  transform: scale(1.1); /* Slight scaling effect for hover */
+}
+
+/* Optional: active link styling (you can tweak this for active route highlighting) */
+.navbar-links a.active {
+  color: #F1B6B3; /* Highlight active links */
+}
+
+/* Navbar responsive behavior */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide the links */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .navbar-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
 }
