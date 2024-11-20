@@ -23,11 +23,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  align-items: center; /* Ensure links are vertically aligned */
 }
 
 /* Individual link styles */
 .navbar-links li {
   margin: 0 1rem;
+  position: relative; /* Ensure positioning is relative for dropdown */
 }
 
 .navbar-links a {
@@ -37,6 +39,8 @@
   text-transform: uppercase;
   padding: 5px 0;
   transition: color 0.3s, transform 0.3s;
+  line-height: 1.5; /* Set line-height to make the height consistent */
+  vertical-align: middle; /* Align vertically */
 }
 
 /* Hover effects for links */

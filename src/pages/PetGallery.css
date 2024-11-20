@@ -6,6 +6,14 @@
   margin: 20px;
 }
 
+.loading-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  min-height: 100px;       /* Adjust the height to make the spinner more compact */
+  margin-bottom: 20px;     
+}
+
 @media (max-width: 768px) {
   .pet-gallery {
     grid-template-columns: 1fr;

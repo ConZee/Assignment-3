@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { PetProvider } from './context/context';
 import Home from './pages/Home';
 import PetGallery from './pages/PetGallery';
 import AdoptPet from './pages/AdoptPet';
@@ -11,18 +12,20 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes> {/* Use Routes instead of Switch */}
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<PetGallery />} />
-        <Route path="/adopt" element={<AdoptPet />} />
-        <Route path="/release" element={<ReleasePet />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUs />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <PetProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<PetGallery />} />
+          <Route path="/adopt" element={<AdoptPet />} />
+          <Route path="/release" element={<ReleasePet />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </PetProvider>
   );
 }
 
