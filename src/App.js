@@ -6,6 +6,7 @@ import AboutUs from './pages/AboutUs';
 import PetGallery from './pages/PetGallery';
 import AdoptPet from './pages/AdoptPet';
 import ReleasePet from './pages/ReleasePet';
+import Volunteer from './pages/Volunteer';
 import Donation from './pages/Donation';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/gallery" element={<PetGallery />} />
           <Route path="/adopt/:petName" element={<AdoptPet />} /> {/* Dynamic petName route */}
           <Route path="/release" element={<ReleasePet />} />
+          <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/donate" element={<Donation />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>

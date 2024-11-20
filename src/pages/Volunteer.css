@@ -1,27 +1,21 @@
-.donation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh; /* Adjust height as needed */
-}
-
-.donation-form {
-  padding: 30px;
+.volunteer-form {
+  background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
-  max-width: 600px;
-  width: 100%; /* Ensure responsiveness */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
 }
 
-.donation-form .form-group {
+.volunteer-form .form-group {
   margin-bottom: 15px;
 }
 
-.donation-form label {
+.volunteer-form label {
   font-size: 1.1rem;
   color: #333;
 }
 
-.donation-form input, .donation-form select {
+.volunteer-form input, .volunteer-form select, .volunteer-form textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -30,7 +24,11 @@
   font-size: 1rem;
 }
 
-.donate-btn {
+.volunteer-form textarea {
+  height: 100px;
+}
+
+.volunteer-btn {
   background-color: #E0A4A1;
   color: #fff;
   padding: 12px 24px;
@@ -41,6 +39,6 @@
   margin-top: 15px;
 }
 
-.donate-btn:hover {
+.volunteer-btn:hover {
   background-color: #d08780;
 }
