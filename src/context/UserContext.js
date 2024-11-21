@@ -8,11 +8,12 @@ export const UserProvider = ({ children }) => {
   const [password, setPassword] = useState('password123');  // Hardcoded password for validation
 
   // Login function
-  const login = (username, password) => {
+  const login = (username, passwordInput) => {
     // Simulate authentication
-    if (username === 'johnd' && password === 'password123') {
+    if (username === 'johnd' && passwordInput === password) {
       setIsLoggedIn(true);
       setUser({ username, name: 'John Doe' });
+      localStorage.setItem('user', JSON.stringify({ username, name: 'John Doe' }));
     } else {
       alert('Invalid login credentials');
     }
@@ -22,6 +23,7 @@ export const UserProvider = ({ children }) => {
   const logout = () => {
     setIsLoggedIn(false);
     setUser(null);
+    localStorage.removeItem('user');
   };
 
   useEffect(() => {

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import LoginModal from './Auth/LoginModal';
+import logo from '../img/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -19,7 +20,9 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-logo'>
-        <Link to="/">Pet Heaven</Link>
+        <Link to="/">
+        <img src={logo} alt="Pet Heaven Logo" className="logo-img" />
+        </Link>
       </div>
       <ul className='navbar-links'>
         <li><Link to="/">Home</Link></li>
@@ -33,7 +36,15 @@ const Navbar = () => {
       </ul>
       <div className="navbar-auth">
         {user ? (
-            <button onClick={handleLogoutClick}>Logout</button>
+            <div className="auth-container">
+              <div className="auth-texts">
+                <span className="welcome-message">Welcome, {user.username}!</span>
+                <Link to="/change-password" className="navbar-links-a">Change Password</Link>
+              </div>
+              <div className="logout-container">
+                <button onClick={handleLogoutClick}>Logout</button>
+              </div>
+            </div>
           ) : (
             <button onClick={handleLoginClick}>Login</button>
           )}

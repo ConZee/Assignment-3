@@ -11,6 +11,7 @@ import Volunteer from './pages/Volunteer';
 import Donation from './pages/Donation';
 import ContactUs from './pages/ContactUs';
 import Register from './pages/Register';
+import ChangePassword from './components/Auth/ChangePassword';
 import Success from './pages/Success';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/donate" element={<Donation />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/change-password" element={<ChangePassword />} />
             <Route path="/success" element={<Success />} />
           </Routes>
           <Footer />

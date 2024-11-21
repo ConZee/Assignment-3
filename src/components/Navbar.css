@@ -1,20 +1,18 @@
 /* Navbar container */
 .navbar {
   background-color: #D8C4A3; /* Pastel Brown */
-  padding: 1rem 2rem; /* Adjust padding to your liking */
+  padding: 1rem 2rem; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
 /* Logo styles */
-.navbar-logo a {
-  font-size: 1.8rem;
-  color: #3E3A3A; /* Dark Brown */
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
+.logo-img {
+  width: 80px; /* Adjust the width to fit your design */
+  height: auto;
+
 }
 
 /* Navbar links container */
@@ -49,9 +47,46 @@
   transform: scale(1.1); /* Slight scaling effect for hover */
 }
 
-/* Optional: active link styling (you can tweak this for active route highlighting) */
-.navbar-links a.active {
-  color: #F1B6B3; /* Highlight active links */
+/* Auth elements */
+.auth-container {
+  display: flex;
+  flex-direction: row; /* Stack the welcome message and change password link */
+  align-items: flex-start; /* Align the items to the left */
+  margin-right: 15px; /* Optional: Add space between these items and the logout button */
+}
+
+/* Wlcome message and change password link */
+.auth-texts {
+  display: flex;
+  flex-direction: column; /* Stack the welcome message and change password link vertically */
+  align-items: flex-start; /* Align to the left */
+  margin-right: 15px; /* Optional: Adds space between text and the logout button */
+}
+
+/* Welcome message style */
+.welcome-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3E3A3A; /* Dark Brown */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-bottom: 5px; /* Space between welcome message and change password link */
+}
+
+/* Change Password link style */
+.navbar-links-a {
+  color: #3E3A3A; /* Dark Brown */
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.3s;
+  line-height: 1;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect for the "Change Password" link */
+.navbar-links-a:hover {
+  color: #F5F5DC; /* Soft Ivory/Beige for hover effect */
+  transform: scale(1.1); /* Slight scaling effect for hover */
 }
 
 .navbar-auth button {
