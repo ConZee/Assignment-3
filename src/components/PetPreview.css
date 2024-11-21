@@ -37,6 +37,7 @@
   font-size: 2rem; /* Make arrows more prominent */
   z-index: 1000; /* Ensure arrows are on top of the carousel */
   color: #333; /* Set a visible arrow color */
+  font-size: 0;
 }
 
 .slick-prev:hover,

@@ -54,6 +54,21 @@
   color: #F1B6B3; /* Highlight active links */
 }
 
+.navbar-auth button {
+  background-color: #E0A4A1; /* Muted Coral for button */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.navbar-auth button:hover {
+  background-color: #C0807C; /* Hover colour */
+}
+
 /* Navbar responsive behavior */
 @media (max-width: 768px) {
   .navbar-links {

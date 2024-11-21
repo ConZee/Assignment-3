@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Description from '../components/Description';
 import './Donation.css';
 
 const Donation = () => {
+  const navigate = useNavigate();  // Initialize the navigate function
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [donationAmount, setDonationAmount] = useState('');
@@ -11,8 +14,13 @@ const Donation = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Example: Log donation details
-    console.log(`Name: ${name}, Email: ${email}, Amount: ${donationAmount}, Type: ${donationType}`);
+    
+    // Redirect to the success page with success message
+    navigate('/success', {
+      state: {
+        message: 'Your application has been submitted successfully. We will review it and get back to you soon!'
+      }
+    });
   };
 
   return (

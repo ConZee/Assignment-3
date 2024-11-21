@@ -1,0 +1,87 @@
+.contact-us-container {
+  padding: 0 20px; /* Add horizontal padding to the container */
+}
+
+.contact-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px auto;
+  background-color: #f4f4f4;  /* Light background color for the sections */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.contact-info {
+  flex: 1 1 30%; /* Set flex basis to 30% */
+  padding: 20px;
+}
+
+.google-map {
+  flex: 1 1 60%; /* Set flex basis to 70% */
+  padding: 20px;
+}
+
+.contact-info h2,
+.google-map h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #E0A4A1;          /* Muted coral color */
+}
+
+.contact-info p {
+  display: flex;
+  justify-content: center;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.google-map iframe {
+  border-radius: 10px;
+}
+
+.faq-section {
+  margin-top: 40px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #D8C4A3;
+  margin-bottom: 20px;
+}
+
+.faq-section details {
+  background-color: #f4f4f4;  /* Light background color for the sections */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 15px;
+}
+
+.faq-section summary {
+  background-color: #fff; /* White background for contrast */
+  padding: 10px;      /* Add padding inside the box */
+  border-radius: 10px;     /* Rounded corners for a soft look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: center;      /* Center the text */
+  color: #E0A4A1;          /* Muted coral color */
+  font-size: 1.5rem;      /* Adjust size for emphasis */
+  cursor: pointer;
+}
+
+.faq-section summary:hover {
+  color: #555;
+}
+
+.faq-section p {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  text-align: center;      /* Center the text */
+  color: #555;
+}

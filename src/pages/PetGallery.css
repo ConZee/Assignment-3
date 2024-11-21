@@ -1,3 +1,8 @@
+.pet-gallery-container {
+  position: relative;  /* Ensures the filter can be positioned relative to this container */
+  padding-top: 50px; /* Adjust to create space above the gallery */
+}
+
 .pet-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +17,39 @@
   align-items: center;    /* Center vertically */
   min-height: 100px;       /* Adjust the height to make the spinner more compact */
   margin-bottom: 20px;     
+}
+
+.filters {
+  display: flex;
+  gap: 20px;  /* Space between filter fields */
+  padding-right: 155px;
+  justify-content: flex-end; /* Align the filters to the right */
+  margin: 20px 0;  /* Add vertical space between the filters and gallery */
+}
+
+.filters label {
+  font-size: 1.3rem;  /* Increase font size to match select boxes */
+  font-weight: bold;  /* Make the label text bold for better readability */
+  align-self: center;  /* Vertically align the label with the select box */
+}
+
+.filters select {
+  padding: 8px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.no-pets-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust height as needed */
+  font-size: 24px;
+  font-weight: bold;
+  color: #D8C4A3;
+  text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 768px) {

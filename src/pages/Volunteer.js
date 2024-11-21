@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Description from '../components/Description';
 import './Volunteer.css';
 
 const Volunteer = () => {
+  const navigate = useNavigate();  // Initialize the navigate function
+
   const [volunteerName, setVolunteerName] = useState('');
   const [volunteerEmail, setVolunteerEmail] = useState('');
   const [interestArea, setInterestArea] = useState('');
@@ -10,8 +13,13 @@ const Volunteer = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here, such as sending data to a backend
-    console.log('Volunteer submitted:', { volunteerName, volunteerEmail, interestArea, availability });
+    
+    // Redirect to the success page with success message
+    navigate('/success', {
+      state: {
+        message: 'Your application has been submitted successfully. We will review it and get back to you soon!'
+      }
+    });
   };
 
   return (

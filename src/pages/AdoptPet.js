@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Description from '../components/Description';
 import './PetForms.css';
 
 const AdoptPet = () => {
   const { petName } = useParams(); // Retrieve the petName from URL params
+  const navigate = useNavigate();  // Initialize the navigate function
+
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [contactNumber, setContactNumber] = useState('');
   const [address, setAddress] = useState('');
   const [adoptionReason, setAdoptionReason] = useState('');
-  const [message, setMessage] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage(`Adopt request for ${petName} submitted!`);
+    
+    // Redirect to the success page with success message
+    navigate('/success', {
+      state: {
+        message: 'Your application has been submitted successfully. We will review it and get back to you soon!'
+      }
+    });
   };
 
   return (
@@ -42,6 +49,7 @@ const AdoptPet = () => {
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
+              placeholder="Enter your full name"
               required
             />
           </div>
@@ -52,6 +60,7 @@ const AdoptPet = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email address"
               required
             />
           </div>
@@ -62,6 +71,7 @@ const AdoptPet = () => {
               type="tel"
               value={contactNumber}
               onChange={(e) => setContactNumber(e.target.value)}
+              placeholder="Enter your contact number"
               required
             />
           </div>
@@ -71,6 +81,7 @@ const AdoptPet = () => {
               id="address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
+              placeholder="Enter your residential address"
               required
             />
           </div>
@@ -80,12 +91,12 @@ const AdoptPet = () => {
               id="adoptionReason"
               value={adoptionReason}
               onChange={(e) => setAdoptionReason(e.target.value)}
+              placeholder="Enter your reason for adopting"
               required
             />
           </div>
           <button type="submit">Submit</button>
         </form>
-        {message && <p>{message}</p>}
       </div>
     </div>
   );

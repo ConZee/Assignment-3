@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Description from '../components/Description'; // Assuming you have a description component
 import './PetForms.css';
 
 const ReleasePet = () => {
+  const navigate = useNavigate();  // Initialize the navigate function
+  
   const [petName, setPetName] = useState('');
   const [petType, setPetType] = useState('');
   const [petBreed, setPetBreed] = useState('');
@@ -22,7 +25,13 @@ const ReleasePet = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle the form submission logic here
+    
+    // Redirect to the success page with success message
+    navigate('/success', {
+      state: {
+        message: 'Your application has been submitted successfully. We will review it and get back to you soon!'
+      }
+    });
   };
 
   return (
