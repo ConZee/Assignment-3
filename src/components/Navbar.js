@@ -1,14 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
+import LoginModal from './Auth/LoginModal';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { user, logout } = useContext(UserContext);  // Use UserContext to access user and logout function
+  const { user, logout } = useContext(UserContext);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
-  // Handle logout action
-  const handleLogout = () => {
-    logout(); // Call logout function from context
+  const handleLoginClick = () => {
+    setShowLoginModal(true); // Show login modal when the login button is clicked
+  };
+
+  const handleLogoutClick = () => {
+    logout(); // Log out the user
   };
 
   return (
@@ -28,15 +33,14 @@ const Navbar = () => {
       </ul>
       <div className="navbar-auth">
         {user ? (
-          // If user is logged in, show Logout button
-          <button onClick={handleLogout}>Logout</button>
-        ) : (
-          // If no user is logged in, show Login button
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
-        )}
+            <button onClick={handleLogoutClick}>Logout</button>
+          ) : (
+            <button onClick={handleLoginClick}>Login</button>
+          )}
       </div>
+      {showLoginModal && (
+        <LoginModal setShowLoginModal={setShowLoginModal} />
+      )}
     </nav>
   );
 };
